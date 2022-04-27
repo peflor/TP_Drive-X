@@ -57,6 +57,13 @@ $drivers = [
       "category" => "drag",
       "likeIts" => 0
     ],
+    [
+        "fullName" => "Lewis Hamilton",
+        "pays" => "Angleterre",
+        "coverImage" => "./assets/img/drivers/lewis.jpg",
+        "category" => "formule 1",
+        "likeIts" => 0
+      ],
   ];
 
   $cars = [

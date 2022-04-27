@@ -1,3 +1,5 @@
+<?php require_once "data.repo.php"?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,7 +14,7 @@
 </head>
 
 <body>
-    <?php require_once "header.php"?>
+    <?php require_once "./partial/header.php"?>
 
     <div class="container">
         <div class="jumbotron my-5 text-center">
@@ -36,19 +38,19 @@
             <div class="card text-center shadow">
 
                 <div class="card-header bg-dark text-white">
-                    <h2 class="card-title">Lewis Hamilton</h2>
+                    <h2 class="card-title"><?= $drivers[8]["fullName"] ?></h2>
                 </div>
 
                 <div class="card-body">
 
-                    <img src="./assets/img/drivers/lewis.jpg" width="300px" height="150px" class="img-fluid"
+                    <img src=<?= $drivers[8]["coverImage"] ?> width="300px" height="150px" class="img-fluid"
                         alt="photo kenblock">
                     <hr>
 
-                    <p>Origine: Angleterre</p>
+                    <p>Origine: <?= $drivers[8]["pays"] ?></p>
 
                     <p>Discipline:
-                        <span class=" badge badge-primary">formule 1</span>
+                        <span class=" badge badge-primary"><?= $drivers[8]["category"] ?></span>
                     </p>
 
                     <button class="btn btn-success mx-2 border">
@@ -65,19 +67,19 @@
             <div class="card text-center shadow">
 
                 <div class="card-header bg-dark text-white ">
-                    <h2 class="card-title">Shirley Muldowney</h2>
+                    <h2 class="card-title"><?= $drivers[5]["fullName"] ?></h2>
                 </div>
 
                 <div class="card-body">
 
-                    <img src="./assets/img/drivers/shirleymuldowney.jpg" width="300px" height="150px" class="img-fluid"
+                    <img src=<?= $drivers[5]["coverImage"] ?> width="300px" height="150px" class="img-fluid"
                         alt="photo kenblock">
                     <hr>
 
-                    <p>Origine: USA</p>
+                    <p>Origine: <?= $drivers[5]["pays"] ?></p>
 
                     <p>Discipline:
-                        <span class=" badge badge-danger">drag</span>
+                        <span class=" badge badge-danger"><?= $drivers[5]["category"] ?></span>
                     </p>
 
                     <button class="btn btn-success mx-2 border" >
@@ -154,7 +156,7 @@
     </div>
 
 
-    <?php require_once "footer.php"?>
+    <?php require_once "./partial/footer.php"?>
 </body>
 
 </html>
