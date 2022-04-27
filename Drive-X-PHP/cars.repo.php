@@ -1,6 +1,15 @@
+<?php require_once "data.repo.php"?>
+
 <div class="card text-center shadow my-3">
                 <div class="card-header bg-dark text-white ">
-                    <h2 class="card-title">Bugatti Chiron</h2>
+                    <h2 class="card-title">
+                        <?php 
+                            for ($i = 0; $i < count($cars); $i++) {
+                                echo $cars[$i]["name"];
+                            }            
+                        ?>
+
+                    </h2>
                 </div>
 
                 <div class="card-body">
