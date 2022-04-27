@@ -1,19 +1,6 @@
 <?php require_once "data.repo.php"?>
 
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Drive-X</title>
-</head>
-
-<body>
     <?php require_once "./partial/header.php"?>
 
     <div class="container">
@@ -43,8 +30,8 @@
 
                 <div class="card-body">
 
-                    <img src=<?= $drivers[8]["coverImage"] ?> width="300px" height="150px" class="img-fluid"
-                        alt="photo kenblock">
+                    <img src="<?= $drivers[8]["coverImage"] ?>" width="300px" height="150px" class="img-fluid"
+                        alt="photo <?= $drivers[8]["fullName"] ?>">
                     <hr>
 
                     <p>Origine: <?= $drivers[8]["pays"] ?></p>
@@ -72,8 +59,8 @@
 
                 <div class="card-body">
 
-                    <img src=<?= $drivers[5]["coverImage"] ?> width="300px" height="150px" class="img-fluid"
-                        alt="photo kenblock">
+                    <img src="<?= $drivers[5]["coverImage"] ?>" width="300px" height="150px" class="img-fluid"
+                        alt="photo <?= $drivers[5]["fullName"] ?>">
                     <hr>
 
                     <p>Origine: <?= $drivers[5]["pays"] ?></p>
@@ -157,6 +144,3 @@
 
 
     <?php require_once "./partial/footer.php"?>
-</body>
-
-</html>

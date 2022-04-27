@@ -1,6 +1,7 @@
 <?php
 
-
+$driversTitle = "Nos Pilotes";
+$carsTitle = "Nos Véhicules";
 
 $drivers = [
     [
