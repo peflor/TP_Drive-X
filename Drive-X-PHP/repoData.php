@@ -38,7 +38,7 @@ $drivers = [
     ],
     [
       "fullName" => "shirley muldowney",
-      "pays" => usa,
+      "pays" => "usa",
       "coverImage" => "./assets/img/drivers/shirleymuldowney.jpg",
       "category" => "drag",
       "likeIts" => 0
