@@ -1,23 +1,26 @@
-<?php require_once "data.repo.php"?>
+<?php require_once "data.repo.php"; ?>
 
-<?php require_once "./partial/header.php"?>
+<?php require_once "partials/header.php" ?>
 
+<main class="container">
+
+    <h1 class="my-5">
+        <?= $driverTitle ?>
+    </h1>
     
+    <div class="row flex-lg-row flex-xl-row flex-column">
 
-    <div class="container">
+       <?php foreach($drivers as $driver ):?>
+            <?php require "partials/driver.card.php" ?>
+       <?php endforeach;?>
 
-        <h1 class="my-5">
-            <?= $driversTitle ?>
-        </h1>
-
-        <div class="row flex-lg-row flex-xl-row flex-column">
-            <?php 
-            for ($i = 0; $i < count($drivers) ; $i++) {
-                require "drivers.repo.php";
-            }            
-            ?>
-        </div>    
     </div>
 
-  
-    <?php require_once "./partial/footer.php"?>
+   
+</main>
+
+<?php require "partials/footer.php" ?>
+
+</body>
+
+</html>
