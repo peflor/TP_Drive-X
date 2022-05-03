@@ -8,25 +8,27 @@
         <img src="<?= $car["coverImage"] ?>" class="img-fluid" alt="photo de <?= $car["name"] ?>">
         <hr>
 
-        <?php if(empty($car["pays"])): ?>
+        <?php if($car["pays"]): ?>
         <p>Origine:
-            <span>NC</span>
-        </p>
-        <?php else: ?>
-            <p>Origine:
             <span><?= mb_strtoupper($car["pays"]) ?></span>
         </p>
+        <?php else: ?>
+        <p>Origine:
+            <span>NC</span>   
+        </p>
         <?php endif ?>
-
+<!-- SWITCH doit etre collé a gauche sinon bug -->
 <?php switch($car["power"]): ?>
 <?php case $car["power"]<1000: ?>
-<p>Puissance: <span class="badge badge-danger"> <?= $car["power"] ?> </span> </p>
+    <p>Puissance: <span class="badge badge-danger"> <?= $car["power"] ?> CH</span> </p>
 <?php break; ?>
+
 <?php case $car["power"]>=1000 && $car["power"]<=1200: ?>
-<p>Puissance: <span class="badge badge-warning"> <?= $car["power"] ?> </span> </p>
+    <p>Puissance: <span class="badge badge-warning"> <?= $car["power"] ?> CH</span> </p>
 <?php break; ?>
+
 <?php case $car["power"]>1200: ?>
-<p>Puissance: <span class="badge badge-success"> <?= $car["power"] ?> </span> </p>
+    <p>Puissance: <span class="badge badge-success"> <?= $car["power"] ?> CH</span> </p>
 <?php break; ?>
 <?php endswitch ?>
 
