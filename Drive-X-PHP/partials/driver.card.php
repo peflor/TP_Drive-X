@@ -1,8 +1,15 @@
-<div class="card text-center shadow my-3">
+<?php 
+$a = "border border-success";
+$b = "border border-danger";
+
+$border = $driver["likeIts"]>0 ? $a : ($driver["likeIts"]<0 ? $b : "");
+?>
+
+<div class="card text-center shadow my-3 <?php echo $border ?>">
 
     <div class="card-header bg-dark text-white">
         <h2 class="card-title">
-            <?= $driver["fullName"] ?>
+            <?= ucwords($driver["fullName"]) ?>
         </h2>
     </div>
 
@@ -11,11 +18,44 @@
         <img src="<?= $driver["coverImage"] ?>" width="300px" height="150px" class="img-fluid" alt="photo <?= $driver["fullName"] ?>">
         <hr>
 
-        <p>Origine: <span><?= $driver["pays"] ?></span></p>
+        <?php if(empty($driver["pays"])): ?>
+        <p>Origine:
+            <span>NC</span>
+        </p>
+        <?php else: ?>
+            <p>Origine:
+            <span><?= mb_strtoupper($driver["pays"]) ?></span>
+        </p>
+        <?php endif ?>
 
-        <p>Discipline:
+<?php switch($driver["category"]): ?>
+<?php case $driver["category"]="formule 1": ?>
+    <p>Discipline:
             <span class="badge badge-success"> <?= $driver["category"] ?> </span>
         </p>
+<?php break; ?>
+<?php case $driver["category"]="gymkhana": ?>
+    <p>Discipline:
+            <span class="badge badge-danger"> <?= $driver["category"] ?> </span>
+        </p>
+<?php break; ?>
+<?php case $driver["category"]="nascar": ?>
+    <p>Discipline:
+            <span class="badge badge-warning"> <?= $driver["category"] ?> </span>
+        </p>
+<?php break; ?>
+<?php case $driver["category"]="rallye": ?>
+    <p>Discipline:
+            <span class="badge badge-info"> <?= $driver["category"] ?> </span>
+        </p>
+<?php break; ?>
+<?php case $driver["category"]="drag": ?>
+    <p>Discipline:
+            <span class="badge badge-primary"> <?= $driver["category"] ?> </span>
+        </p>
+<?php break; ?>
+<?php endswitch ?>
+      
 
         <button class="btn btn-success mx-2 border">
             <i class="fas fa-thumbs-up"></i>
