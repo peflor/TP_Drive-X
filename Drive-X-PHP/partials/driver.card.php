@@ -1,11 +1,4 @@
-<?php 
-$a = "border border-success";
-$b = "border border-danger";
-
-$border = $driver["likeIts"]>0 ? $a : ($driver["likeIts"]<0 ? $b : "");
-?>
-
-<div class="card text-center shadow my-3 <?php echo $border ?>">
+<div class="<?php echo $driver["likeIts"]>0 ? "card text-center shadow my-3 border border-success" : ($driver["likeIts"]<0 ? "card text-center shadow my-3 border border-danger":  "card text-center shadow my-3") ?>" >
 
     <div class="card-header bg-dark text-white">
         <h2 class="card-title">
