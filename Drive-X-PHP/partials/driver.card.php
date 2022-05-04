@@ -1,3 +1,5 @@
+<?php require_once "services.php"?>
+
 <div class="card text-center shadow my-3 <?php echo ($driver["likeIts"]>0) ? " border border-success" : ( ($driver["likeIts"]<0) ? "border border-danger":  "") ?>" >
 <!-- avec le if en ternaire on doit mettre le echo devant la condition -->
 
@@ -22,33 +24,8 @@
         </p>
         <?php endif ?>
 
-<?php switch($driver["category"]): ?>
-<?php case $driver["category"]=="formule 1": ?>
-    <p>Discipline:
-            <span class="badge badge-success"> <?= $driver["category"] ?> </span>
-        </p>
-<?php break; ?>
-<?php case $driver["category"]=="gymkhana": ?>
-    <p>Discipline:
-            <span class="badge badge-primary"> <?= $driver["category"] ?> </span>
-        </p>
-<?php break; ?>
-<?php case $driver["category"]=="drag": ?>
-    <p>Discipline:
-            <span class="badge badge-info"> <?= $driver["category"] ?> </span>
-        </p>
-<?php break; ?>
-<?php case $driver["category"]=="rallye": ?>
-    <p>Discipline:
-            <span class="badge badge-danger"> <?= $driver["category"] ?> </span>
-        </p>
-<?php break; ?>
-<?php case $driver["category"]=="nascar": ?>
-    <p>Discipline:
-            <span class="badge badge-warning"> <?= $driver["category"] ?> </span>
-        </p>
-<?php break; ?>
-<?php endswitch ?>
+        <!-- Appel de la fonction dans le fichier services.php -->
+        <?php driverCategorySwitch($driver["category"])?>
       
 
         <button class="btn btn-success mx-2 border">
