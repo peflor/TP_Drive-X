@@ -37,21 +37,11 @@ function driverCategorySwitch ($category){
     }  
 }
 
+usort($drivers, function($x, $y) {
+    return $y['likeIts'] <=> $x['likeIts'];
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+usort($cars, function($x, $y){
+    return $y['power'] <=> $x['power'];
+});
 

@@ -1,8 +1,6 @@
-<?php
-require_once "data.repo.php";
-?>
+<?php require_once "data.repo.php" ?>
 <?php require_once "partials/header.php" ?>
-
+<?php require_once "services.php" ?>
 
 <div class="container">
     <div class="jumbotron my-5 text-center">
