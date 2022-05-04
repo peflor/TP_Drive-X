@@ -33,7 +33,7 @@
 
     <div class="card-deck flex-lg-row flex-md-row flex-xl-row flex-column">
 
-        <?php foreach((array_slice($cars, 0, 2, true)) as $car ):?>
+        <?php foreach((array_slice($cars, 0, 2,true)) as $car ):?>
             <?php require "partials/car.card.php"; ?>            
         <?php endforeach;?>
 
