@@ -4,15 +4,15 @@ function carPowerSwitch($power){
 
     switch($power){
     case $power<1000 :
-        echo "<p>Puissance: <span class='badge badge-danger'>" . $power . " CH</span></p>";
+        echo "<span class='badge badge-danger'>" . $power . " CH</span>";
     break; 
     
     case $power>=1000 && $power<=1200 :
-        echo "<p>Puissance: <span class='badge badge-warning'>" . $power . " CH</span></p>";
+        echo "<span class='badge badge-warning'>" . $power . " CH</span>";
     break; 
     
     case $power>1200 :
-        echo "<p>Puissance: <span class='badge badge-success'>" . $power . " CH</span></p>";
+        echo "<span class='badge badge-success'>" . $power . " CH</span>";
     break; 
     }
 }
@@ -20,19 +20,19 @@ function driverCategorySwitch ($category){
 
      switch($category){
         case $category=='formule 1': 
-        echo "<p>Discipline: <span class='badge badge-success'>" . $category . "</span></p>";
+        echo "<span class='badge badge-success'>" . $category . "</span>";
         break; 
         case $category=='gymkhana': 
-        echo "<p>Discipline: <span class='badge badge-primary'>" . $category . "</span></p>";
+        echo "<span class='badge badge-primary'>" . $category . "</span>";
         break; 
         case $category=='drag': 
-        echo "<p>Discipline: <span class='badge badge-info'>" . $category . "</span></p>";
+        echo "<span class='badge badge-info'>" . $category . "</span>";
         break; 
         case $category=='rallye': 
-        echo "<p>Discipline: <span class='badge badge-danger'>" . $category . "</span></p>";
+        echo "<span class='badge badge-danger'>" . $category . "</span>";
         break; 
         case $category=='nascar': 
-        echo "<p>Discipline: <span class='badge badge-warning'>" . $category . "</span></p>";
+        echo "<span class='badge badge-warning'>" . $category . "</span>";
         break; 
     }  
 }

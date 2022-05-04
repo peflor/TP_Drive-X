@@ -25,7 +25,8 @@
         <?php endif ?>
 
         <!-- Appel de la fonction dans le fichier services.php -->
-        <?php driverCategorySwitch($driver["category"])?>
+        <p>Discipline : <?php driverCategorySwitch($driver["category"])?> </p>
+       
       
 
         <button class="btn btn-success mx-2 border">

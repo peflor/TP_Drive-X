@@ -23,7 +23,7 @@ require_once "services.php";
         <?php endif ?>
 
     <!-- appel de la fonction dans services.php-->
-    <?php carPowerSwitch($car["power"]) ?>
+    <p>Puissance : <?php carPowerSwitch($car["power"]) ?></p>    
 
         <?php if(empty($car["perf"])): ?>
             <p>0 à 100 km/h: NC </p>
