@@ -1,4 +1,5 @@
 <?php require_once "data.repo.php"; ?>
+<?php require_once "services.php"; ?>
 
 <?php require_once "partials/header.php" ?>
 

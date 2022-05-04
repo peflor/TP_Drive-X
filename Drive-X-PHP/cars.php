@@ -1,5 +1,6 @@
 <?php require_once "data.repo.php";?>
 <?php require_once "partials/header.php" ?>
+<?php require_once "services.php"; ?>
 
 <main class="container">
 
