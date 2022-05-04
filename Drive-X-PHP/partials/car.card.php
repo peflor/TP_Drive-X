@@ -1,3 +1,7 @@
+<?php
+require_once "services.php";
+?>
+
 <div class="card text-center shadow my-3">
 
     <div class="card-header bg-dark text-white ">
@@ -17,20 +21,9 @@
             <span>NC</span>   
         </p>
         <?php endif ?>
-<!-- SWITCH doit etre collé a gauche sinon bug -->
-<?php switch($car["power"]): ?>
-<?php case $car["power"]<1000: ?>
-    <p>Puissance: <span class="badge badge-danger"> <?= $car["power"] ?> CH</span> </p>
-<?php break; ?>
 
-<?php case $car["power"]>=1000 && $car["power"]<=1200: ?>
-    <p>Puissance: <span class="badge badge-warning"> <?= $car["power"] ?> CH</span> </p>
-<?php break; ?>
-
-<?php case $car["power"]>1200: ?>
-    <p>Puissance: <span class="badge badge-success"> <?= $car["power"] ?> CH</span> </p>
-<?php break; ?>
-<?php endswitch ?>
+    <!-- appel de la fonction dans services.php-->
+    <?php carPowerSwitch($car["power"]) ?>
 
         <?php if(empty($car["perf"])): ?>
             <p>0 à 100 km/h: NC </p>
