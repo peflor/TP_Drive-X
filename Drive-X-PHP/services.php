@@ -36,12 +36,13 @@ function driverCategorySwitch ($category){
         break; 
     }  
 }
-
-usort($drivers, function($x, $y) {
+$driversTri = $drivers;
+usort($driversTri, function($x, $y) {
     return $y['likeIts'] - $x['likeIts'];
 });
 
-usort($cars, function($x, $y){
+$carsTri = $cars;
+usort($carsTri, function($x, $y){
     return $y['power'] - $x['power'];
 });
 
