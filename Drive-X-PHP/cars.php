@@ -8,6 +8,8 @@
         <?= $carTitle ?>
     </h1>
 
+    <a href="form.car.php" class="btn btn-success"><i class="fas fa-plus-circle"></i> Ajouter un véhicule</a>
+
     <div class="row flex-lg-row flex-xl-row flex-column">
 
        <?php foreach($cars as $car ):?>

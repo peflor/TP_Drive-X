@@ -1,6 +1,6 @@
 <footer class="bg-dark p-5 fixed text-white text-center mt-5">
 
-<p class="font-weight-bold">Amar2050</p>
+<p class="font-weight-bold">Flo 2076</p>
 
 <div class="d-flex justify-content-center">
     <i class="fab fa-github fa-2x mx-3"></i>
