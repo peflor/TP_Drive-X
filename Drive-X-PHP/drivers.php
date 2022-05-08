@@ -8,6 +8,8 @@
     <h1 class="my-5">
         <?= $driverTitle ?>
     </h1>
+
+    <a href="form.driver.php" class="btn btn-success"><i class="fas fa-plus-circle"></i> Ajouter un pilote</a>
     
     <div class="row flex-lg-row flex-xl-row flex-column">
 
