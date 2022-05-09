@@ -39,7 +39,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
              $stmt->bindValue(":nom",$carName, PDO::PARAM_STR);
              $stmt->bindValue(":pays",$carPays, PDO::PARAM_STR);
              $stmt->bindValue(":puissance",$carPower, PDO::PARAM_INT);
-             $stmt->bindValue(":perf",$carPerf, PDO::PARAM_INT);
+             $stmt->bindValue(":perf",$carPerf, PDO::PARAM_STR);
              $stmt->bindValue(":coverimage",$carCoverImage, PDO::PARAM_STR);
              $result = $stmt->execute();
              $stmt->closeCursor();
