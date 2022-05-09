@@ -118,6 +118,8 @@ $drivers = [
 //   ];
 
 // connexion à la BDD et récupération des donéées pour le READ
+
+
 require "partials/bdd.php"; 
 
 $req  = $bdd->prepare("SELECT * FROM cars ");  
