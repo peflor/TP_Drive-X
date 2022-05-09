@@ -5,11 +5,11 @@ require_once "services.php";
 <div class="card text-center shadow my-3">
 
     <div class="card-header bg-dark text-white ">
-        <h2 class="card-title"><?= ucwords($car["name"]) ?></h2>
+        <h2 class="card-title"><?= ucwords($car["nom"]) ?></h2>
     </div>
 
     <div class="card-body">
-        <img src="<?= $car["coverImage"] ?>" class="img-fluid" alt="photo de <?= $car["name"] ?>">
+        <img src="<?= $car["coverimage"] ?>" class="img-fluid" alt="photo de <?= $car["nom"] ?>">
         <hr>
 
         <?php if($car["pays"]): ?>
@@ -23,7 +23,7 @@ require_once "services.php";
         <?php endif ?>
 
     <!-- appel de la fonction dans services.php-->
-    <p>Puissance : <?php carPowerSwitch($car["power"]) ?></p>    
+    <p>Puissance : <?php carPowerSwitch($car["puissance"]) ?></p>    
 
         <?php if(empty($car["perf"])): ?>
             <p>0 à 100 km/h: NC </p>

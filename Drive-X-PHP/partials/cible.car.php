@@ -24,7 +24,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
              $carPays = $_POST["pays"];
              $carPower = $_POST["puissance"];
              $carPerf = $_POST["perf"];
-             $carCoverImage = '../assets/img/cars/'.$newImageName;
+             $carCoverImage = './assets/img/cars/'.$newImageName;
              
              var_dump($carName);
             

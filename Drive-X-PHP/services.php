@@ -43,6 +43,6 @@ usort($driversTri, function($x, $y) {
 
 $carsTri = $cars;
 usort($carsTri, function($x, $y){
-    return $y['power'] - $x['power'];
+    return $y['puissance'] - $x['puissance'];
 });
 
