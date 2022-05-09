@@ -2,7 +2,6 @@
 
 require_once 'header.php';
 
-// var_dump($_POST);
 
 if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
 
@@ -17,8 +16,38 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
             $newImageName = time().rand().rand().'.'.$extensionImage;
             move_uploaded_file($_FILES['image']['tmp_name'], '../assets/img/cars/'.$newImageName);
             $send = true;
-            header("Location: ../cars.php");    
-                   
+            
+            require 'bdd.php';
+ 
+            //  $carCoverImage ='../assets/img/cars/'.$newImageName;
+             $carName= $_POST["nom"];
+             $carPays = $_POST["pays"];
+             $carPower = $_POST["puissance"];
+             $carPerf = $_POST["perf"];
+             $carCoverImage = '../assets/img/cars/'.$newImageName;
+             
+             var_dump($carName);
+            
+             $req = "INSERT INTO cars (nom,pays,coverimage,puissance,perf) VALUES         
+                         (:nom, 
+                         :pays,
+                         :coverimage,
+                         :puissance,
+                         :perf)";
+            
+             $stmt = $bdd->prepare($req);
+             $stmt->bindValue(":nom",$carName, PDO::PARAM_STR);
+             $stmt->bindValue(":pays",$carPays, PDO::PARAM_STR);
+             $stmt->bindValue(":puissance",$carPower, PDO::PARAM_INT);
+             $stmt->bindValue(":perf",$carPerf, PDO::PARAM_INT);
+             $stmt->bindValue(":coverimage",$carCoverImage, PDO::PARAM_STR);
+             $result = $stmt->execute();
+             $stmt->closeCursor();
+
+             if($result) {
+                 header("Location: ../cars.php"); 
+             }
+
         }else{?>
             <div class="container my-5 text-center">            
                 <h4 class="alert alert-danger">L'extension de fichier "<?= $extensionImage ?>" n'est pas prise en charge<br>
@@ -35,23 +64,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
 <?php }
 }
 
-// var_dump($_FILES['image']);
 
-// if (!empty($_POST)) {
-//     $carName= $_POST["name"];
-//     $carPays = $_POST["pays"];
-//     $carPower = $_POST["power"];
-//     $carPerf = $_POST["perf"];
-    
-//     echo $carName."<br>";
-//     echo $carPays."<br>";
-//     echo $carPower."<br>";
-//     echo $carPerf."<br>";
-       
-// } 
-
-
-
-// header("Location: cars.php");
+ 
 
 ?>

@@ -7,7 +7,7 @@
         <form action="partials/cible.car.php" method="POST" enctype="multipart/form-data" class="my-3">
         <div class="form-group">
             <label for="nomvehicule">Nom du véhicule</label>
-            <input type="text" name="name" class="form-control" id="nomvehicule"  required>            
+            <input type="text" name="nom" class="form-control" id="nomvehicule"  required>            
         </div>
         <div class="form-group">
             <label for="paysorigine">Pays d'origine du véhicule</label>
@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label for="puissancevehicule">Puissance du véhicule en CH</label>
-            <input type="number" name="power" class="form-control" id="puissancevehicule" >            
+            <input type="number" name="puissance" class="form-control" id="puissancevehicule" >            
         </div>
         <div class="form-group">
             <label for="performancevehicule">Performance du véhicule en secondes de 0 à 100km/h</label>
