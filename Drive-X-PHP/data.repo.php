@@ -131,4 +131,4 @@ $req  = $bdd->prepare("SELECT * FROM drivers ");
 $req->execute(); 
 $drivers = $req->fetchAll(PDO::FETCH_ASSOC);
 $req->closeCursor(); 
-var_dump($drivers);
+// var_dump($drivers);

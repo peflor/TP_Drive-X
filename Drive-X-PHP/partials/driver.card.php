@@ -37,6 +37,18 @@
             <i class="fas fa-thumbs-down"></i>
         </button>
 
+        <div class="row text-center justify-content-center mt-5">
+        <form class="col-3" action="partials/delete.drivers.php" method="POST" onSubmit="return confirm('Êtes-vous certain de vouloir supprimer ce pilote ?')">
+            <input hidden type="text" name="driverID" value="<?= $driver["id"] ?>">
+            <button class="btn btn-danger " type="submit" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+        </form>
+       
+        <form class="col-3" action="partials/edit.drivers.php" method="POST">
+            <input hidden type="text" name="driverID" value="<?= $driver["id"] ?>">
+            <button class="btn btn-success" type="submit" title="Modifier"><i class="fas fa-edit"></i></button>
+        </form>
+        </div>
+
     </div>
 </div>
 <hr>
