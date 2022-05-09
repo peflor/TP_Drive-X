@@ -43,7 +43,7 @@
             <button class="btn btn-danger " type="submit" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
         </form>
        
-        <form class="col-3" action="partials/edit.drivers.php" method="POST">
+        <form class="col-3" action="partials/edit.driver.php" method="POST">
             <input hidden type="text" name="driverID" value="<?= $driver["id"] ?>">
             <button class="btn btn-success" type="submit" title="Modifier"><i class="fas fa-edit"></i></button>
         </form>
