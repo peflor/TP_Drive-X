@@ -33,6 +33,10 @@ require_once "services.php";
 
         <p>Réserver maintenant !</p>
         <button class="btn btn-primary ">Réserver</button>
+        <form action="partials/delete.car.php" method="POST" onSubmit="return confirm('Êtes-vous certain de voulair supprimer ce véhicule ?')">
+            <input hidden type="text" name="carID" value="<?= $car["id"] ?>">
+            <button class="btn btn-danger mt-4"><i class="fas fa-trash-alt"></i></button>
+        </form>
     </div>
 </div>
 <hr>

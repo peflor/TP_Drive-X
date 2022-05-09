@@ -126,4 +126,4 @@ $cars = $req->fetchAll(PDO::FETCH_ASSOC);
 
 $req->closeCursor(); 
 
-// var_dump($myGames[0]['nom']);
+var_dump($cars);
