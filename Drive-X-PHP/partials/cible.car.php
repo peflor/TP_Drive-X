@@ -14,15 +14,14 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
 
         if(in_array($extensionImage, $extensionsArray)) {
             
-            $newImageName = time().rand().rand().'.'.$extensionImage;            
-            var_dump($_FILES['image']['tmp_name']);
+            $newImageName = time().rand().rand().'.'.$extensionImage;
             move_uploaded_file($_FILES['image']['tmp_name'], '../assets/img/cars/'.$newImageName);
             $send = true;
             header("Location: ../cars.php");    
                    
         }else{?>
             <div class="container my-5 text-center">            
-                <h4>L'extension de fichier "<?= $extensionImage ?>" n'est pas prise en charge<br>
+                <h4 class="alert alert-danger">L'extension de fichier "<?= $extensionImage ?>" n'est pas prise en charge<br>
                 veuillez choisir un autre fichier</h4>
                 <a href="../form.car.php" class="btn btn-success my-5">revenir au formulaire</a>            
             </div>
@@ -30,7 +29,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
     
     }else{ ?>
         <div class="container my-5 text-center">            
-            <h4>Le fichier est trop volumineux merci de recommencer</h4>
+            <h4 class="alert alert-danger">Le fichier est trop volumineux merci de recommencer</h4>
             <a href="../form.car.php" class="btn btn-success my-5">revenir au formulaire</a>            
         </div>
 <?php }
@@ -38,18 +37,18 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
 
 // var_dump($_FILES['image']);
 
-if (!empty($_POST)) {
-    $carName= $_POST["name"];
-    $carPays = $_POST["pays"];
-    $carPower = $_POST["power"];
-    $carPerf = $_POST["perf"];
+// if (!empty($_POST)) {
+//     $carName= $_POST["name"];
+//     $carPays = $_POST["pays"];
+//     $carPower = $_POST["power"];
+//     $carPerf = $_POST["perf"];
     
-    echo $carName."<br>";
-    echo $carPays."<br>";
-    echo $carPower."<br>";
-    echo $carPerf."<br>";
+//     echo $carName."<br>";
+//     echo $carPays."<br>";
+//     echo $carPower."<br>";
+//     echo $carPerf."<br>";
        
-} 
+// } 
 
 
 
