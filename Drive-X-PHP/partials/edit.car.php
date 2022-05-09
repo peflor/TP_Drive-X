@@ -70,11 +70,11 @@ $req->closeCursor();
             <input type="text" name="perf" class="form-control" id="performancevehicule" value="<?=$car[0]["perf"]?>">            
             </div>
         
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="image">Photo du véhicule (JPG, PNG ou GIF : taille maximale 1Mo)</label>
-            <img src='.<?=$car[0]["coverimage"]?>' alt="">
-            <input type="file" name="image" class="form-control-file mt-3" id="image" max-width="150px" max-height="auto">
-        </div> -->
+            <img src='.<?=$car[0]["coverimage"]?>' max-width="150px" max-height="auto">
+            <input type="file" name="image" class="form-control-file mt-3" id="image" >
+        </div>
         <input hidden type="text" name="carID" value="<?= $car[0]["id"] ?>">
         <button type="submit" class="btn btn-primary my-3"><i class="fas fa-plus-circle"></i> Modifier</button>
         </form>

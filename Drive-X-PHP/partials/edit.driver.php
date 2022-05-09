@@ -76,10 +76,11 @@ $req->closeCursor();
             <label for="like">Nombre de Likes</label>
             <input type="number" name="likeits" class="form-control" id="like" value="<?= $driver[0]["likeits"]?>" >            
         </div>    
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="image">Photo du pilote (JPG, PNG ou GIF : taille maximale 1Mo)</label>
-            <input type="file" name="image" class="form-control-file" id="image" required>
-        </div> -->
+            <img src='.<?=$driver[0]["coverimage"]?>' max-width="150px" max-height="auto">
+            <input type="file" name="image" class="form-control-file" id="image" >
+        </div>
             <input hidden type="text" name="driverID" value="<?= $driver[0]["id"] ?>">
             <button type="submit" class="btn btn-primary my-3"><i class="fas fa-plus-circle"></i> Modifier</button>
         </form> 
