@@ -1,17 +1,17 @@
 <?php require_once "services.php"?>
 
-<div class="card text-center shadow my-3 <?php echo ($driver["likeIts"]>0) ? " border border-success" : ( ($driver["likeIts"]<0) ? "border border-danger":  "") ?>" >
+<div class="card text-center shadow my-3 <?php echo ($driver["likeits"]>0) ? " border border-success" : ( ($driver["likeits"]<0) ? "border border-danger":  "") ?>" >
 <!-- avec le if en ternaire on doit mettre le echo devant la condition -->
 
     <div class="card-header bg-dark text-white">
         <h2 class="card-title">
-            <?= ucwords($driver["fullName"]) ?>
+            <?= ucwords($driver["fullname"]) ?>
         </h2>
     </div>
 
     <div class="card-body">
 
-        <img src="<?= $driver["coverImage"] ?>" width="300px" height="150px" class="img-fluid" alt="photo <?= $driver["fullName"] ?>">
+        <img src="<?= $driver["coverimage"] ?>" width="300px" height="150px" class="img-fluid" alt="photo <?= $driver["fullname"] ?>">
         <hr>
 
         <?php if($driver["pays"]): ?>

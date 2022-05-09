@@ -19,26 +19,26 @@ function carPowerSwitch($power){
 function driverCategorySwitch ($category){
 
      switch($category){
-        case $category=='formule 1': 
+        case $category=='Formule 1': 
         echo "<span class='badge badge-success'>" . $category . "</span>";
         break; 
-        case $category=='gymkhana': 
+        case $category=='Gymkhana': 
         echo "<span class='badge badge-primary'>" . $category . "</span>";
         break; 
-        case $category=='drag': 
+        case $category=='Drag': 
         echo "<span class='badge badge-info'>" . $category . "</span>";
         break; 
-        case $category=='rallye': 
+        case $category=='Rallye': 
         echo "<span class='badge badge-danger'>" . $category . "</span>";
         break; 
-        case $category=='nascar': 
+        case $category=='Nascar': 
         echo "<span class='badge badge-warning'>" . $category . "</span>";
         break; 
     }  
 }
 $driversTri = $drivers;
 usort($driversTri, function($x, $y) {
-    return $y['likeIts'] - $x['likeIts'];
+    return $y['likeits'] - $x['likeits'];
 });
 
 $carsTri = $cars;
