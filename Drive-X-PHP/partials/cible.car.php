@@ -26,7 +26,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
              $carPerf = $_POST["perf"];
              $carCoverImage = './assets/img/cars/'.$newImageName;
              
-             var_dump($carName);
+            //  var_dump($carName);
             
              $req = "INSERT INTO cars (nom,pays,coverimage,puissance,perf) VALUES         
                          (:nom, 

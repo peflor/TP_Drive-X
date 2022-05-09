@@ -11,20 +11,20 @@
         </div>
         <div class="form-group">
             <label for="paysorigine">Pays d'origine du véhicule</label>
-            <input type="text" name="pays" class="form-control" id="paysorigine" >            
+            <input type="text" name="pays" class="form-control" id="paysorigine" required>            
         </div>
         <div class="form-group">
             <label for="puissancevehicule">Puissance du véhicule en CH</label>
-            <input type="number" name="puissance" class="form-control" id="puissancevehicule" >            
+            <input type="number" name="puissance" class="form-control" id="puissancevehicule" required>            
         </div>
         <div class="form-group">
             <label for="performancevehicule">Performance du véhicule en secondes de 0 à 100km/h</label>
-            <input type="text" name="perf" class="form-control" id="performancevehicule" >            
+            <input type="text" name="perf" class="form-control" id="performancevehicule" required>            
             </div>
         
         <div class="form-group">
             <label for="image">Photo du véhicule (JPG, PNG ou GIF : taille maximale 1Mo)</label>
-            <input type="file" name="image" class="form-control-file" id="image">
+            <input type="file" name="image" class="form-control-file" id="image" required>
         </div>
         <button type="submit" class="btn btn-primary my-3"><i class="fas fa-plus-circle"></i> Ajouter</button>
         </form>
