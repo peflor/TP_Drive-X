@@ -126,4 +126,4 @@ $cars = $req->fetchAll(PDO::FETCH_ASSOC);
 
 $req->closeCursor(); 
 
-var_dump($cars);
+// var_dump($cars);

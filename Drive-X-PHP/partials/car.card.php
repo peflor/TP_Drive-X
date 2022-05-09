@@ -32,11 +32,18 @@ require_once "services.php";
         <?php endif ?>
 
         <p>Réserver maintenant !</p>
-        <button class="btn btn-primary ">Réserver</button>
-        <form action="partials/delete.car.php" method="POST" onSubmit="return confirm('Êtes-vous certain de voulair supprimer ce véhicule ?')">
+        
+        <div class="row text-center justify-items-center">
+        <form class="col-4" action="partials/delete.car.php" method="POST" onSubmit="return confirm('Êtes-vous certain de vouloir supprimer ce véhicule ?')">
             <input hidden type="text" name="carID" value="<?= $car["id"] ?>">
-            <button class="btn btn-danger mt-4"><i class="fas fa-trash-alt"></i></button>
+            <button class="btn btn-danger " type="submit" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
         </form>
+        <button class="btn btn-primary col-4">Réserver</button>
+        <form class="col-4" action="partials/edit.car.php" method="POST">
+            <input hidden type="text" name="carID" value="<?= $car["id"] ?>">
+            <button class="btn btn-success" type="submit" title="Modifier"><i class="fas fa-edit"></i></button>
+        </form>
+        </div>
     </div>
 </div>
 <hr>
